@@ -32,7 +32,7 @@
               placeholder="Enter 4 Digit Pin"
             />
             <button
-              class="bg-[#F4F5F7] w-72 h-10 rounded-xl  mb-7 text-black border-blue-500 border-2 hover:text-white hover:bg-blue-500 text-lg"
+              class="bg-[#F4F5F7] w-72 h-10 rounded-xl  mb-7 text-black border-blue-500 border-2 hover:text-white hover:bg-blue-500 text-lg cursor-pointer"
             >
               Login
             </button>
@@ -50,7 +50,7 @@
               <h6 class="text-sm">Available Balance</p>
             </div>
           </div>
-          <button class="w-24 h-12 border-2">Log Out</button>
+          <button class="w-24 h-12 border-2 cursor-pointer hover:bg-blue-500 hover:text-white rounded-xl font-bold">Log Out</button>
         </nav>
       </section>
 
@@ -87,7 +87,7 @@
           </div>
         </div>
       </section>
-      <div class="px-6 pt-4">
+      <div class="px-6 pt-4 hidden">
           <div class="flex place-content-between ">
             <h3 class="text-xl">Add Money</h3>
             <p>View All</p>
@@ -131,7 +131,24 @@
             </div>
               <img class="w-10 h-10 items-end ml-16" src="https://cdn-icons-png.flaticon.com/512/7066/7066144.png" alt="">
            </div>
+      </div>
+
+      <!-- add money section -->
+      <section class="px-9 py-6">
+        <h1 class="text-xl">Add Money</h1>
+        <div class="bg-white mt-3 px-4 py-5 rounded-xl">
+          <h2 class=" font-bold">Select A Bank</h2>
+          <input class="bg-[#F4F5F7] mt-2 w-72 rounded-xl" type="text">
+          <h2 class=" font-bold pt-3">Bank Account Number</h2>
+          <input class="bg-[#F4F5F7] mt-2 w-72 rounded-xl" type="number">
+          <h2 class=" font-bold pt-3">Amount to Add</h2>
+          <input class="bg-[#F4F5F7] mt-2 w-72 rounded-xl" type="number">
+          <h2 class="-md font-bold pt-3">Pin Number</h2>
+          <input class="bg-[#F4F5F7] mt-2 w-72 rounded-xl" type="password">
+          <button class="w-72 mt-5 bg-[#F4F5F7] border-2 rounded-xl border-blue-500 text-blue-500 cursor-pointer hover:bg-blue-500 hover:text-white font-bold">Add Money</button>
         </div>
+      </section>
+
       </div>
   </body>
 </html>
