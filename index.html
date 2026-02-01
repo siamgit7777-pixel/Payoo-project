@@ -17,7 +17,7 @@
   <body class="bg-[#F4F5F7]">
     <div class="max-w-md m mx-auto flex flex-col items-center">
       <!-- login section -->
-      <section class="mam-h-md my-auto">
+      <section class="mam-h-md my-auto hidden">
         <img src="/assets/Logo-full.png" alt="" />
         <div class="bg-white rounded-xl px-7 mt-8">
           <h1 class="text-xl pb-3 pt-7">Mobile Number</h1>
@@ -42,7 +42,7 @@
         </div>
       </section>
 
-      <div class="hidden">
+      <div class="">
         <!-- Main Section -->
         <section id="mainSection bg-[#F4F5F7] ">
           <!-- nav Section -->
@@ -119,26 +119,28 @@
           <!-- cards Section -->
           <div id="">
             <!-- Add Money Section -->
-            <div class="px-6 pt-4">
+            <section class="px-6 pt-4 hidden">
               <div class="flex place-content-between">
                 <h3 class="text-xl">Add Money</h3>
                 <p>View All</p>
               </div>
               <!-- Electricity Bill -->
               <div
-                class="flex flex-row gap-4 bg-white px-6 py-2 items-center rounded-xl my-4"
+                class="flex flex-row gap-4 bg-white px-6 py-2 items-center rounded-xl my-4 place-content-between"
               >
-                <img
-                  class="rounded-full w-10 h-10"
-                  src="/assets/opt-1.png"
-                  alt=""
-                />
-                <div>
-                  <h4 class="text-lg font-bold">Electricity Bill</h4>
-                  <p>Today 01:44 AM</p>
+                <div class="gap-2 flex">
+                  <img
+                    class="rounded-full w-10 h-10"
+                    src="/assets/opt-1.png"
+                    alt=""
+                  />
+                  <div>
+                    <h4 class="text-lg font-bold">Electricity Bill</h4>
+                    <p>Today 01:44 AM</p>
+                  </div>
                 </div>
                 <img
-                  class="w-10 h-10 items-end ml-16"
+                  class="w-7 h-7 items-end ml-16"
                   src="https://cdn-icons-png.flaticon.com/512/7066/7066144.png"
                   alt=""
                 />
@@ -146,19 +148,21 @@
 
               <!-- Bank Deposit -->
               <div
-                class="flex flex-row gap-4 bg-white px-6 py-2 items-center rounded-xl my-4"
+                class="flex flex-row gap-4 bg-white px-6 py-2 items-center rounded-xl my-4 place-content-between"
               >
-                <img
-                  class="rounded-full w-10 h-10"
-                  src="/assets/opt-1.png"
-                  alt=""
-                />
-                <div>
-                  <h4 class="text-lg font-bold">Bank Deposit</h4>
-                  <p>Today 01:44 AM</p>
+                <div class="flex gap-2">
+                  <img
+                    class="rounded-full w-10 h-10"
+                    src="/assets/opt-1.png"
+                    alt=""
+                  />
+                  <div>
+                    <h4 class="text-lg font-bold">Bank Deposit</h4>
+                    <p>Today 01:44 AM</p>
+                  </div>
                 </div>
                 <img
-                  class="w-10 h-10 items-end ml-16"
+                  class="w-7 h-7 items-end ml-16"
                   src="https://cdn-icons-png.flaticon.com/512/7066/7066144.png"
                   alt=""
                 />
@@ -166,19 +170,21 @@
 
               <!-- Mobile Recharge -->
               <div
-                class="flex flex-row gap-4 bg-white px-6 py-2 items-center rounded-xl my-4"
+                class="flex flex-row gap-4 bg-white px-6 py-2 items-center rounded-xl my-4 place-content-between"
               >
-                <img
-                  class="rounded-full w-10 h-10"
-                  src="/assets/opt-1.png"
-                  alt=""
-                />
-                <div>
-                  <h4 class="text-lg font-bold">Mobile Recharge</h4>
-                  <p>Today 01:44 AM</p>
+                <div class="flex gap-2">
+                  <img
+                    class="rounded-full w-10 h-10"
+                    src="/assets/opt-1.png"
+                    alt=""
+                  />
+                  <div>
+                    <h4 class="text-lg font-bold">Mobile Recharge</h4>
+                    <p>Today 01:44 AM</p>
+                  </div>
                 </div>
                 <img
-                  class="w-10 h-10 items-end ml-16"
+                  class="w-7 h-7 items-end ml-16"
                   src="https://cdn-icons-png.flaticon.com/512/7066/7066144.png"
                   alt=""
                 />
@@ -186,51 +192,57 @@
 
               <!-- Gas Bill -->
               <div
-                class="flex flex-row gap-4 bg-white px-6 py-2 items-center rounded-xl my-4"
+                class="flex flex-row gap-4 bg-white px-6 py-2 items-center rounded-xl my-4 place-content-between"
               >
-                <img
-                  class="rounded-full w-10 h-10"
-                  src="/assets/opt-1.png"
-                  alt=""
-                />
-                <div>
-                  <h4 class="text-lg font-bold">Gas Bill</h4>
-                  <p>Today 01:44 AM</p>
+                <div class="flex gap-2">
+                  <img
+                    class="rounded-full w-10 h-10"
+                    src="/assets/opt-1.png"
+                    alt=""
+                  />
+                  <div>
+                    <h4 class="text-lg font-bold">Gas Bill</h4>
+                    <p>Today 01:44 AM</p>
+                  </div>
                 </div>
                 <img
-                  class="w-10 h-10 items-end ml-16"
+                  class="w-7 h-7 items-end ml-16"
                   src="https://cdn-icons-png.flaticon.com/512/7066/7066144.png"
                   alt=""
                 />
               </div>
-            </div>
+            </section>
 
             <!-- add money section -->
-            <section class="px-9 py-6 hidden">
+            <section class="px-9 py-6 mx-auto hidden">
               <h1 class="text-xl">Add Money</h1>
-              <div class="bg-white mt-3 px-4 py-5 rounded-xl">
+              <div class="bg-white mt-3 px-4 py-5 rounded-xl max-w-md mx-auto">
                 <h2 class="font-bold">Select A Bank</h2>
                 <input
-                  class="bg-[#F4F5F7] mt-2 w-72 rounded-xl pl-2 py-2"
+                  class="bg-[#F4F5F7] mt-2 w-full rounded-xl pl-2 py-2"
                   type="text"
+                  placeholder="Select back"
                 />
                 <h2 class="font-bold pt-3">Bank Account Number</h2>
                 <input
-                  class="bg-[#F4F5F7] mt-2 w-72 rounded-xl pl-2 py-2"
+                  class="bg-[#F4F5F7] mt-2 w-full rounded-xl pl-2 py-2"
                   type="number"
+                  placeholder="Enter 11 digit account number"
                 />
                 <h2 class="font-bold pt-3">Amount to Add</h2>
                 <input
-                  class="bg-[#F4F5F7] mt-2 w-72 rounded-xl pl-2 py-2"
+                  class="bg-[#F4F5F7] mt-2 w-full rounded-xl pl-2 py-2"
                   type="number"
+                  placeholder="Add Amount to withdraw"
                 />
                 <h2 class="-md font-bold pt-3">Pin Number</h2>
                 <input
-                  class="bg-[#F4F5F7] mt-2 w-72 rounded-xl pl-2 py-2"
+                  class="bg-[#F4F5F7] mt-2 w-full rounded-xl pl-2 py-2"
                   type="password"
+                  placeholder="Enter 4 digit pin number"
                 />
                 <button
-                  class="w-72 mt-5 bg-[#F4F5F7] border-2 rounded-xl border-blue-500 text-blue-500 cursor-pointer hover:bg-blue-500 hover:text-white font-bold"
+                  class="w-full h-8 mt-5 bg-[#F4F5F7] border-2 rounded-xl border-blue-500 text-blue-500 cursor-pointer hover:bg-blue-500 hover:text-white font-bold"
                 >
                   Add Money
                 </button>
@@ -240,27 +252,27 @@
             <!-- Cash out section -->
             <section class="px-9 py-6 hidden">
               <h2 class="text-xl">Cash Out</h2>
-              <div class="bg-white mt-3 px-4 py-5 rounded-xl">
+              <div class="bg-white mt-3 px-4 py-5 rounded-xl max-w-md mx-auto">
                 <h2 class="font-bold">Agent Number</h2>
                 <input
-                  class="bg-[#F4F5F7] mt-2 w-72 rounded-xl pl-2 py-2"
+                  class="bg-[#F4F5F7] mt-2 w-full rounded-xl pl-2 py-2"
                   type="number"
                   placeholder="Enter 11 digit number"
                 />
                 <h2 class="font-bold pt-3">Amount</h2>
                 <input
-                  class="bg-[#F4F5F7] mt-2 w-72 rounded-xl pl-2 py-2"
+                  class="bg-[#F4F5F7] mt-2 w-full rounded-xl pl-2 py-2"
                   type="number"
                   placeholder="Enter amount to withdraw"
                 />
                 <h2 class="font-bold pt-3">Pin Number</h2>
                 <input
-                  class="bg-[#F4F5F7] mt-2 w-72 rounded-xl pl-2 py-2"
+                  class="bg-[#F4F5F7] mt-2 w-full rounded-xl pl-2 py-2"
                   type="password"
                   placeholder="Enter 4 digit pin number"
                 />
                 <button
-                  class="w-72 mt-5 bg-[#F4F5F7] border-2 rounded-xl border-blue-500 text-blue-500 cursor-pointer hover:bg-blue-500 hover:text-white font-bold"
+                  class="w-full h-8 mt-5 bg-[#F4F5F7] border-2 rounded-xl border-blue-500 text-blue-500 cursor-pointer hover:bg-blue-500 hover:text-white font-bold"
                 >
                   Withdraw Money
                 </button>
@@ -270,27 +282,27 @@
             <!-- Transfer Money -->
             <section class="px-9 py-6 hidden">
               <h2 class="text-xl">Transfer Money</h2>
-              <div class="bg-white mt-3 px-4 py-5 rounded-xl">
+              <div class="bg-white mt-3 px-4 py-5 rounded-xl max-w-md mx-auto">
                 <h2 class="font-bold">User Account Number</h2>
                 <input
-                  class="bg-[#F4F5F7] mt-2 w-72 rounded-xl pl-2 py-2"
+                  class="bg-[#F4F5F7] mt-2 w-full rounded-xl pl-2 py-2"
                   type="number"
                   placeholder="Enter 11 digit number"
                 />
                 <h2 class="font-bold pt-3">Amount</h2>
                 <input
-                  class="bg-[#F4F5F7] mt-2 w-72 rounded-xl pl-2 py-2"
+                  class="bg-[#F4F5F7] mt-2 w-full rounded-xl pl-2 py-2"
                   type="number"
                   placeholder="Enter amount to withdraw"
                 />
                 <h2 class="font-bold pt-3">Pin Number</h2>
                 <input
-                  class="bg-[#F4F5F7] mt-2 w-72 rounded-xl pl-2 py-2"
+                  class="bg-[#F4F5F7] mt-2 w-full rounded-xl pl-2 py-2"
                   type="password"
                   placeholder="Enter 4 digit pin number"
                 />
                 <button
-                  class="w-72 mt-5 bg-[#F4F5F7] border-2 rounded-xl border-blue-500 text-blue-500 cursor-pointer hover:bg-blue-500 hover:text-white font-bold"
+                  class="w-full h-8 mt-5 bg-[#F4F5F7] border-2 rounded-xl border-blue-500 text-blue-500 cursor-pointer hover:bg-blue-500 hover:text-white font-bold"
                 >
                   Send Now
                 </button>
@@ -300,15 +312,15 @@
             <!-- Get Bonus -->
             <section class="px-9 py-6 hidden">
               <h2 class="text-xl">Get Bonus</h2>
-              <div class="bg-white mt-3 px-4 py-5 rounded-xl">
+              <div class="bg-white mt-3 px-4 py-5 rounded-xl max-w-md mx-auto">
                 <h2 class="font-bold">Enter Bonus Coupon</h2>
                 <input
-                  class="bg-[#F4F5F7] mt-2 w-72 rounded-xl pl-2 py-2"
+                  class="bg-[#F4F5F7] mt-2 w-full rounded-xl pl-2 py-2"
                   type="number"
                   placeholder="Enter your coupon"
                 />
                 <button
-                  class="w-72 mt-5 bg-[#F4F5F7] border-2 rounded-xl border-blue-500 text-blue-500 cursor-pointer hover:bg-blue-500 hover:text-white font-bold"
+                  class="w-full h-8 mt-5 bg-[#F4F5F7] border-2 rounded-xl border-blue-500 text-blue-500 cursor-pointer hover:bg-blue-500 hover:text-white font-bold"
                 >
                   Get Bonus
                 </button>
@@ -318,33 +330,33 @@
             <!-- Pay Bill Section -->
             <section class="px-9 py-6 hidden">
               <h2 class="text-xl">Pay Bill</h2>
-              <div class="bg-white mt-3 px-4 py-5 rounded-xl">
+              <div class="bg-white mt-3 px-4 py-5 rounded-xl max-w-md mx-auto">
                 <h2 class="font-bold">Select To Pay</h2>
                 <input
-                  class="bg-[#F4F5F7] mt-2 w-72 rounded-xl pl-2 py-2"
+                  class="bg-[#F4F5F7] mt-2 w-full rounded-xl pl-2 py-2"
                   type="text"
                   placeholder="Select back"
                 />
                 <h2 class="font-bold">Biller Account Number</h2>
                 <input
-                  class="bg-[#F4F5F7] mt-2 w-72 rounded-xl pl-2 py-2"
+                  class="bg-[#F4F5F7] mt-2 w-full rounded-xl pl-2 py-2"
                   type="number"
                   placeholder="Enter account number"
                 />
                 <h2 class="font-bold">Amount to Pay</h2>
                 <input
-                  class="bg-[#F4F5F7] mt-2 w-72 rounded-xl pl-2 py-2"
+                  class="bg-[#F4F5F7] mt-2 w-full rounded-xl pl-2 py-2"
                   type="number"
                   placeholder="Add Amount to pay"
                 />
                 <h2 class="font-bold">Pin Number</h2>
                 <input
-                  class="bg-[#F4F5F7] mt-2 w-72 rounded-xl pl-2 py-2"
+                  class="bg-[#F4F5F7] mt-2 w-full rounded-xl pl-2 py-2"
                   type="password"
                   placeholder="Select back"
                 />
                 <button
-                  class="w-72 mt-5 bg-[#F4F5F7] border-2 rounded-xl border-blue-500 text-blue-500 cursor-pointer hover:bg-blue-500 hover:text-white font-bold"
+                  class="w-full h-8 mt-5 bg-[#F4F5F7] border-2 rounded-xl border-blue-500 text-blue-500 cursor-pointer hover:bg-blue-500 hover:text-white font-bold"
                 >
                   Pay Now
                 </button>
@@ -352,7 +364,7 @@
             </section>
 
             <!-- Transaction History Section -->
-            <div class="px-6 pt-4 hidden">
+            <section class="px-6 pt-4">
               <div class="flex place-content-between">
                 <h3 class="text-xl">Transaction History</h3>
                 <p>View All</p>
@@ -436,10 +448,13 @@
                   alt=""
                 />
               </div>
-            </div>
+            </section>
           </div>
         </section>
       </div>
     </div>
+
+    <!-- JS File -->
+    <script src="/script.js"></script>
   </body>
 </html>
