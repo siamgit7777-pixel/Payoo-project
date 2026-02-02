@@ -14,8 +14,10 @@
       crossorigin="anonymous"
     ></script>
   </head>
-  <body class="bg-[#F4F5F7]">
-    <div class="max-w-md m mx-auto flex flex-col items-center">
+  <body class="bg-[#161c29]">
+    <div
+      class="max-w-md min-h-screen mx-auto flex bg-[#F4F5F7] flex-col items-center"
+    >
       <!-- login section -->
       <section id="loginContainer" class="mam-h-md my-auto">
         <img src="/assets/Logo-full.png" alt="" />
@@ -79,38 +81,44 @@
 
           <div class="grid grid-cols-3 gap-4 pt-5">
             <div
-              class="bg-white border rounded-lg p-2 text-center flex flex-col items-center hover:bg-blue-50"
+              id="addMoneyBtn"
+              class="bg-white border rounded-lg p-2 text-center flex flex-col items-center hover:bg-blue-50 cursor-pointer"
             >
               <img class="pt-3" src="./assets/opt-1.png" alt="" />
               <p class="pt-3">Add Money</p>
             </div>
 
             <div
-              class="bg-white border rounded-lg p-2 text-center flex flex-col items-center hover:bg-blue-50"
+              id="cashOutBtn"
+              class="bg-white border rounded-lg p-2 text-center flex flex-col items-center hover:bg-blue-50 cursor-pointer"
             >
               <img class="pt-3" src="./assets/opt-2.png" alt="" />
               <p>Cashout</p>
             </div>
             <div
-              class="bg-white border rounded-lg p-2 text-center flex flex-col items-center hover:bg-blue-50"
+              id="transferMoneyBtn"
+              class="bg-white border rounded-lg p-2 text-center flex flex-col items-center hover:bg-blue-50 cursor-pointer"
             >
               <img class="pt-3" src="./assets/opt-3.png" alt="" />
               <p>Transfer Money</p>
             </div>
             <div
-              class="bg-white border rounded-lg p-2 text-center flex flex-col items-center hover:bg-blue-50"
+              id="getBonusBtn"
+              class="bg-white border rounded-lg p-2 text-center flex flex-col items-center hover:bg-blue-50 cursor-pointer"
             >
               <img class="pt-3" src="./assets/opt-4.png" alt="" />
               <p>Get Bonus</p>
             </div>
             <div
-              class="bg-white border rounded-lg p-2 text-center flex flex-col items-center hover:bg-blue-50"
+              id="payBillBtn"
+              class="bg-white border rounded-lg p-2 text-center flex flex-col items-center hover:bg-blue-50 cursor-pointer"
             >
               <img class="pt-3" src="./assets/opt-5.png" alt="" />
               <p>Pay Bill</p>
             </div>
             <div
-              class="bg-white border rounded-lg p-2 text-center flex flex-col items-center hover:bg-blue-50"
+              id="transactionsBtn"
+              class="bg-white border rounded-lg p-2 text-center flex flex-col items-center hover:bg-blue-50 cursor-pointer"
             >
               <img class="pt-3" src="./assets/opt-6.png" alt="" />
               <p>Transactions</p>
@@ -120,10 +128,10 @@
 
         <!-- cards Section -->
         <div id="">
-          <!-- Add Money Section -->
-          <section class="px-6 pt-4">
+          <!-- Latest Payment Section -->
+          <section id="latestPaymentSection" class="px-6 pt-4">
             <div class="flex place-content-between">
-              <h3 class="text-xl">Add Money</h3>
+              <h3 class="text-xl">Latest Payment</h3>
               <p>View All</p>
             </div>
             <!-- Electricity Bill -->
@@ -216,7 +224,7 @@
           </section>
 
           <!-- add money section -->
-          <section class="px-9 py-6 mx-auto hidden">
+          <section id="addMoneySection" class="px-9 py-6 mx-auto hidden">
             <h1 class="text-xl">Add Money</h1>
             <div class="bg-white mt-3 px-4 py-5 rounded-xl max-w-md mx-auto">
               <h2 class="font-bold">Select A Bank</h2>
@@ -252,7 +260,7 @@
           </section>
 
           <!-- Cash out section -->
-          <section class="px-9 py-6 hidden">
+          <section id="cashOutSection" class="px-9 py-6 hidden">
             <h2 class="text-xl">Cash Out</h2>
             <div class="bg-white mt-3 px-4 py-5 rounded-xl max-w-md mx-auto">
               <h2 class="font-bold">Agent Number</h2>
@@ -282,7 +290,7 @@
           </section>
 
           <!-- Transfer Money -->
-          <section class="px-9 py-6 hidden">
+          <section id="TransferSection" class="px-9 py-6 hidden">
             <h2 class="text-xl">Transfer Money</h2>
             <div class="bg-white mt-3 px-4 py-5 rounded-xl max-w-md mx-auto">
               <h2 class="font-bold">User Account Number</h2>
@@ -312,7 +320,7 @@
           </section>
 
           <!-- Get Bonus -->
-          <section class="px-9 py-6 hidden">
+          <section id="getBonusSection" class="px-9 py-6 hidden">
             <h2 class="text-xl">Get Bonus</h2>
             <div class="bg-white mt-3 px-4 py-5 rounded-xl max-w-md mx-auto">
               <h2 class="font-bold">Enter Bonus Coupon</h2>
@@ -330,7 +338,7 @@
           </section>
 
           <!-- Pay Bill Section -->
-          <section class="px-9 py-6 hidden">
+          <section id="payBillSection" class="px-9 py-6 hidden">
             <h2 class="text-xl">Pay Bill</h2>
             <div class="bg-white mt-3 px-4 py-5 rounded-xl max-w-md mx-auto">
               <h2 class="font-bold">Select To Pay</h2>
@@ -366,7 +374,7 @@
           </section>
 
           <!-- Transaction History Section -->
-          <section class="px-6 pt-4 hidden">
+          <section id="latestPaymentSection" class="px-6 pt-4 hidden">
             <div class="flex place-content-between">
               <h3 class="text-xl">Transaction History</h3>
               <p>View All</p>
