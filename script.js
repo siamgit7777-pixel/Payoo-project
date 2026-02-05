@@ -397,3 +397,126 @@ transactionHistoryBtn.addEventListener("click", function () {
     "bg-[#0874F220]",
   );
 });
+
+// aDD JA IN Add Money Section
+
+const addMoneySubmitBtn = document.getElementById("addMoneySubmitBtn");
+
+addMoneySubmitBtn.addEventListener("click", function () {
+  const accountNumber = document.getElementById("accountNumber").value;
+  const amountInput = document.getElementById("amountInput").value;
+  const pinInput = document.getElementById("pinInput").value;
+  const availableBalance =
+    document.getElementById("availableBalance").innerText;
+
+  console.log(availableBalance);
+
+  if (accountNumber === "" || amountInput === "" || pinInput === "") {
+    alert("Please fill in all fields.");
+  } else if (accountNumber.length !== 11) {
+    alert("Account number must be 11 digits.");
+  } else if (pinInput.length !== 4) {
+    alert("Pin number must be 4 digits.");
+  } else {
+    if (pinInput === "1234") {
+      if (amountInput > 0) {
+        const newBalance = parseInt(availableBalance) + parseInt(amountInput);
+        document.getElementById("availableBalance").innerText = newBalance;
+        alert("Money added successfully!");
+
+        document.getElementById("accountNumber").value = "";
+        document.getElementById("amountInput").value = "";
+        document.getElementById("pinInput").value = "";
+      }
+    }
+  }
+});
+
+// add JS in cash out section
+const cashOutSubmitBtn = document.getElementById("cashOutSubmitBtn");
+
+cashOutSubmitBtn.addEventListener("click", function () {
+  const agentNumber = document.getElementById("agentNumber").value;
+  const cashOutAmount = document.getElementById("cashOutAmount").value;
+  const cashOutPin = document.getElementById("cashOutPin").value;
+  const availableBalance =
+    document.getElementById("availableBalance").innerText;
+
+  if (agentNumber === "" || cashOutAmount === "" || cashOutPin === "") {
+    alert("Please fill in all fields.");
+  } else if (agentNumber.length !== 11) {
+    alert("Agent number must be 11 digits.");
+  } else if (cashOutPin.length !== 4) {
+    alert("Pin number must be 4 digits.");
+  } else {
+    if (cashOutPin === "1234") {
+      if (cashOutAmount > 0) {
+        if (parseInt(cashOutAmount) > parseInt(availableBalance)) {
+          alert("Insufficient balance.");
+        } else {
+          const newBalance =
+            parseInt(availableBalance) - parseInt(cashOutAmount);
+          document.getElementById("availableBalance").innerText = newBalance;
+          alert("Cash out successful!");
+        }
+      }
+    }
+  }
+});
+
+// Add JS in Transfer Money Section
+
+const transferMoneySubmitBtn = document.getElementById(
+  "transferMoneySubmitBtn",
+);
+
+transferMoneySubmitBtn.addEventListener("click", function () {
+  const transferAccountNumber = document.getElementById(
+    "transferAccountNumber",
+  ).value;
+  const transferAmount = document.getElementById("transferAmount").value;
+  const transferPin = document.getElementById("transferPin").value;
+  const availableBalance =
+    document.getElementById("availableBalance").innerText;
+
+  if (
+    transferAccountNumber === "" ||
+    transferAmount === "" ||
+    transferPin === ""
+  ) {
+    alert("Please fill in all fields.");
+  } else if (transferAccountNumber.length !== 11) {
+    alert("Account number must be 11 digits.");
+  } else if (transferPin.length !== 4) {
+    alert("Pin number must be 4 digits.");
+  } else {
+    if (transferPin === "1234") {
+      if (transferAmount > 0) {
+        if (parseInt(transferAmount) > parseInt(availableBalance)) {
+          alert("Insufficient balance.");
+        } else {
+          const newBalance =
+            parseInt(availableBalance) - parseInt(transferAmount);
+          document.getElementById("availableBalance").innerText = newBalance;
+          alert("Transfer successful!");
+        }
+      }
+    }
+  }
+});
+
+// Add JS in get bonus section
+const getBonusSubmitBtn = document.getElementById("getBonusSubmitBtn");
+getBonusSubmitBtn.addEventListener("click", function () {
+  const getBonusCoupon = document.getElementById("getBonusCoupon").value;
+  const availableBalance =
+    document.getElementById("availableBalance").innerText;
+  if (getBonusCoupon === "") {
+    alert("Please enter your coupon.");
+  } else if (getBonusCoupon === "SIAM100") {
+    const newBalance = parseInt(availableBalance) + 100;
+    document.getElementById("availableBalance").innerText = newBalance;
+    alert("Bonus added successfully!");
+    document.getElementById("getBonusCoupon").value = "";
+  }
+});

@@ -57,7 +57,9 @@
             <div class="flex gap-5">
               <img class="w-12 h-11" src="./assets/logo.png" alt="" />
               <div>
-                <h3 class="text-md font-bold">$45000</h3>
+                <h3 class="text-md font-bold">
+                  $<span id="availableBalance">45000</span>
+                </h3>
                 <h6 class="text-sm">Available Balance</h6>
               </div>
             </div>
@@ -229,30 +231,38 @@
             <h1 class="text-xl">Add Money</h1>
             <div class="bg-white mt-3 px-4 py-5 rounded-xl max-w-md mx-auto">
               <h2 class="font-bold">Select A Bank</h2>
-              <input
-                class="bg-[#F4F5F7] mt-2 w-full rounded-xl pl-2 py-2"
-                type="text"
-                placeholder="Select back"
-              />
+              <select
+                class="w-full rounded-xl border-0 bg-[#F4F5F7] px-4 py-2 text-gray-700 focus:bg-white focus:ring-2 focus:ring-gray-400 focus:outline-none transition duration-200"
+              >
+                <option value="">Select Bank</option>
+                <option value="City Bank">City Bank</option>
+                <option value="Islami Bank">Islami Bank</option>
+                <option value="Janata Bank">Janata Bank</option>
+              </select>
+
               <h2 class="font-bold pt-3">Bank Account Number</h2>
               <input
+                id="accountNumber"
                 class="bg-[#F4F5F7] mt-2 w-full rounded-xl pl-2 py-2"
                 type="number"
                 placeholder="Enter 11 digit account number"
               />
               <h2 class="font-bold pt-3">Amount to Add</h2>
               <input
+                id="amountInput"
                 class="bg-[#F4F5F7] mt-2 w-full rounded-xl pl-2 py-2"
                 type="number"
                 placeholder="Add Amount to withdraw"
               />
               <h2 class="-md font-bold pt-3">Pin Number</h2>
               <input
+                id="pinInput"
                 class="bg-[#F4F5F7] mt-2 w-full rounded-xl pl-2 py-2"
                 type="password"
                 placeholder="Enter 4 digit pin number"
               />
               <button
+                id="addMoneySubmitBtn"
                 class="w-full h-8 mt-5 bg-[#F4F5F7] border-2 rounded-xl border-blue-500 text-blue-500 cursor-pointer hover:bg-blue-500 hover:text-white font-bold"
               >
                 Add Money
@@ -266,23 +276,27 @@
             <div class="bg-white mt-3 px-4 py-5 rounded-xl max-w-md mx-auto">
               <h2 class="font-bold">Agent Number</h2>
               <input
+                id="agentNumber"
                 class="bg-[#F4F5F7] mt-2 w-full rounded-xl pl-2 py-2"
                 type="number"
                 placeholder="Enter 11 digit number"
               />
               <h2 class="font-bold pt-3">Amount</h2>
               <input
+                id="cashOutAmount"
                 class="bg-[#F4F5F7] mt-2 w-full rounded-xl pl-2 py-2"
                 type="number"
                 placeholder="Enter amount to withdraw"
               />
               <h2 class="font-bold pt-3">Pin Number</h2>
               <input
+                id="cashOutPin"
                 class="bg-[#F4F5F7] mt-2 w-full rounded-xl pl-2 py-2"
                 type="password"
                 placeholder="Enter 4 digit pin number"
               />
               <button
+                id="cashOutSubmitBtn"
                 class="w-full h-8 mt-5 bg-[#F4F5F7] border-2 rounded-xl border-blue-500 text-blue-500 cursor-pointer hover:bg-blue-500 hover:text-white font-bold"
               >
                 Withdraw Money
@@ -296,23 +310,27 @@
             <div class="bg-white mt-3 px-4 py-5 rounded-xl max-w-md mx-auto">
               <h2 class="font-bold">User Account Number</h2>
               <input
+                id="transferAccountNumber"
                 class="bg-[#F4F5F7] mt-2 w-full rounded-xl pl-2 py-2"
                 type="number"
                 placeholder="Enter 11 digit number"
               />
               <h2 class="font-bold pt-3">Amount</h2>
               <input
+                id="transferAmount"
                 class="bg-[#F4F5F7] mt-2 w-full rounded-xl pl-2 py-2"
                 type="number"
                 placeholder="Enter amount to withdraw"
               />
               <h2 class="font-bold pt-3">Pin Number</h2>
               <input
+                id="transferPin"
                 class="bg-[#F4F5F7] mt-2 w-full rounded-xl pl-2 py-2"
                 type="password"
                 placeholder="Enter 4 digit pin number"
               />
               <button
+                id="transferMoneySubmitBtn"
                 class="w-full h-8 mt-5 bg-[#F4F5F7] border-2 rounded-xl border-blue-500 text-blue-500 cursor-pointer hover:bg-blue-500 hover:text-white font-bold"
               >
                 Send Now
@@ -326,11 +344,13 @@
             <div class="bg-white mt-3 px-4 py-5 rounded-xl max-w-md mx-auto">
               <h2 class="font-bold">Enter Bonus Coupon</h2>
               <input
+                id="getBonusCoupon"
                 class="bg-[#F4F5F7] mt-2 w-full rounded-xl pl-2 py-2"
                 type="number"
                 placeholder="Enter your coupon"
               />
               <button
+                id="getBonusSubmitBtn"
                 class="w-full h-8 mt-5 bg-[#F4F5F7] border-2 rounded-xl border-blue-500 text-blue-500 cursor-pointer hover:bg-blue-500 hover:text-white font-bold"
               >
                 Get Bonus
@@ -465,6 +485,6 @@
     </div>
 
     <!-- JS File -->
-    <script src="/script.js"></script>
+    <script src="./script.js"></script>
   </body>
 </html>
