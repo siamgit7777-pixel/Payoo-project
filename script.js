@@ -506,6 +506,7 @@ transferMoneySubmitBtn.addEventListener("click", function () {
 });
 
 // Add JS in get bonus section
+
 const getBonusSubmitBtn = document.getElementById("getBonusSubmitBtn");
 getBonusSubmitBtn.addEventListener("click", function () {
   const getBonusCoupon = document.getElementById("getBonusCoupon").value;
@@ -518,5 +519,44 @@ getBonusSubmitBtn.addEventListener("click", function () {
     document.getElementById("availableBalance").innerText = newBalance;
     alert("Bonus added successfully!");
     document.getElementById("getBonusCoupon").value = "";
+  }
+});
+
+const payBillSubmitBtn = document.getElementById("payBillSubmitBtn");
+
+payBillSubmitBtn.addEventListener("click", function () {
+  const payBillSelect = document.getElementById("payBillSelect").value;
+  const payBillAccountNumber = document.getElementById(
+    "payBillAccountNumber",
+  ).value;
+  const payBillAmount = document.getElementById("payBillAmount").value;
+  const payBillPin = document.getElementById("payBillPin").value;
+  const availableBalance =
+    document.getElementById("availableBalance").innerText;
+
+  if (
+    payBillSelect === "" ||
+    payBillAccountNumber === "" ||
+    payBillAmount === "" ||
+    payBillPin === ""
+  ) {
+    alert("Please fill in all fields.");
+  } else if (payBillAccountNumber.length !== 11) {
+    alert("Account number must be 11 digits.");
+  } else if (payBillPin.length !== 4) {
+    alert("Pin number must be 4 digits.");
+  } else {
+    if (payBillPin === "1234") {
+      if (payBillAmount > 0) {
+        if (parseInt(payBillAmount) > parseInt(availableBalance)) {
+          alert("Insufficient balance.");
+        } else {
+          const newBalance =
+            parseInt(availableBalance) - parseInt(payBillAmount);
+          document.getElementById("availableBalance").innerText = newBalance;
+          alert("Bill payment successful!");
+        }
+      }
+    }
   }
 });
