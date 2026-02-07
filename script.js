@@ -99,6 +99,7 @@ addMoneyBtn.addEventListener("click", function () {
 });
 
 // Cash Out Button Functionality
+
 const cashOutBtn = document.getElementById("cashOutBtn");
 
 cashOutBtn.addEventListener("click", function () {
@@ -130,6 +131,7 @@ cashOutBtn.addEventListener("click", function () {
   );
 
   addMoneySection.classList.add("hidden");
+  latestPaymentSection.classList.add("hidden");
 
   // Cash Out Section
   const cashOutSection = document.getElementById("cashOutSection");
@@ -140,6 +142,11 @@ cashOutBtn.addEventListener("click", function () {
     "border-[#0874F2]",
     "bg-[#0874F220]",
   );
+
+  //  input field clear
+  document.getElementById("agentNumber").value = "";
+  document.getElementById("cashOutAmount").value = "";
+  document.getElementById("cashOutPin").value = "";
 });
 
 //Transfer Money Button Functionality
@@ -155,6 +162,12 @@ transferMoneyBtn.addEventListener("click", function () {
     "bg-[#0874F220]",
   );
   addMoneySection.classList.add("hidden");
+  latestPaymentSection.classList.add("hidden");
+
+  //  input field clear
+  document.getElementById("transferAccountNumber").value = "";
+  document.getElementById("transferAmount").value = "";
+  document.getElementById("transferPin").value = "";
 
   // latest Payment Section
 
@@ -219,6 +232,10 @@ getBonusBtn.addEventListener("click", function () {
     "bg-[#0874F220]",
   );
   addMoneySection.classList.add("hidden");
+  latestPaymentSection.classList.add("hidden");
+
+  //  input field clear
+  document.getElementById("getBonusCoupon").value = "";
 
   // Cash Out Section
   const cashOutSection = document.getElementById("cashOutSection");
@@ -282,6 +299,7 @@ payBillBtn.addEventListener("click", function () {
     "bg-[#0874F220]",
   );
   addMoneySection.classList.add("hidden");
+  latestPaymentSection.classList.add("hidden");
 
   // Cash Out Section
   const cashOutSection = document.getElementById("cashOutSection");
@@ -345,6 +363,7 @@ transactionHistoryBtn.addEventListener("click", function () {
     "bg-[#0874F220]",
   );
   addMoneySection.classList.add("hidden");
+  latestPaymentSection.classList.add("hidden");
 
   // Cash Out Section
   const cashOutSection = document.getElementById("cashOutSection");
@@ -525,7 +544,6 @@ getBonusSubmitBtn.addEventListener("click", function () {
 const payBillSubmitBtn = document.getElementById("payBillSubmitBtn");
 
 payBillSubmitBtn.addEventListener("click", function () {
-  const payBillSelect = document.getElementById("payBillSelect").value;
   const payBillAccountNumber = document.getElementById(
     "payBillAccountNumber",
   ).value;
@@ -535,7 +553,6 @@ payBillSubmitBtn.addEventListener("click", function () {
     document.getElementById("availableBalance").innerText;
 
   if (
-    payBillSelect === "" ||
     payBillAccountNumber === "" ||
     payBillAmount === "" ||
     payBillPin === ""
